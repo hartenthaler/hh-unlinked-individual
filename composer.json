@@ -1,0 +1,25 @@
+{
+  "name": "hartenthaler/hh-unlinked-individual",
+  "description": "webtrees custom module to add an unlinked individual to a tree.",
+  "type": "webtrees-module",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Hermann Hartenthaler"
+    },
+    {
+      "name": "Mats O Jansson",
+      "role": "Original author"
+    }
+  ],
+  "require": {
+    "php": ">=8.3",
+    "fisharebest/webtrees": "^2.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Hartenthaler\\Webtrees\\Module\\UnlinkedIndividual\\": "./",
+      "Hartenthaler\\Webtrees\\Module\\UnlinkedIndividual\\Http\\": "Http/"
+    }
+  }
+}
