@@ -15,10 +15,11 @@ msgstr ""
 "X-Poedit-KeywordsList: translate;noop;plural:1,2;translateContext:1c,2\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: Http/UnlinkedPage.php:75 UnlinkedIndividualModule.php:93
-#: UnlinkedIndividualModule.php:192
+#: UnlinkedIndividualModule.php:86
+msgid "Unlinked individual"
+msgstr "Olänkad person"
+
+#: Http/UnlinkedPage.php:75 UnlinkedIndividualModule.php:96
+#: UnlinkedIndividualModule.php:195
 msgid "Create an unlinked individual"
 msgstr "Skapa en olänkad person"
-
-#~ msgid "Unlinked individual"
-#~ msgstr "Olänkad person"

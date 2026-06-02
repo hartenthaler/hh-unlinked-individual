@@ -83,7 +83,7 @@ class UnlinkedIndividualModule extends AbstractModule implements ModuleCustomInt
      */
     public function title(): string
     {
-        return I18N::translate(self::CUSTOM_TITLE);
+        return I18N::translate('Unlinked individual');
     }
 
     /**
