@@ -18,8 +18,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Hartenthaler\\Webtrees\\Module\\UnlinkedIndividual\\": "./",
-      "Hartenthaler\\Webtrees\\Module\\UnlinkedIndividual\\Http\\": "Http/"
+      "Hartenthaler\\Webtrees\\Module\\UnlinkedIndividual\\": "./"
     }
   }
 }

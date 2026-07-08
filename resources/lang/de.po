@@ -16,11 +16,10 @@ msgstr ""
 "X-Poedit-KeywordsList: translate;noop;plural:1,2;translateContext:1c,2\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: UnlinkedIndividualModule.php:86
+#: UnlinkedIndividualModule.php:72
 msgid "Unlinked individual"
 msgstr "Unverbundene Person"
 
-#: Http/UnlinkedPage.php:75 UnlinkedIndividualModule.php:96
-#: UnlinkedIndividualModule.php:195
+#: UnlinkedIndividualModule.php:82 UnlinkedIndividualModule.php:173
 msgid "Create an unlinked individual"
 msgstr "Erzeuge eine unverbundene Person"

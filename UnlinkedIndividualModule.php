@@ -19,11 +19,9 @@ declare(strict_types=1);
 
 namespace Hartenthaler\Webtrees\Module\UnlinkedIndividual;
 
-use Aura\Router\RouterContainer;
 use Fisharebest\Localization\Translation;
-use Hartenthaler\Webtrees\Module\UnlinkedIndividual\Http\UnlinkedAction;
-use Hartenthaler\Webtrees\Module\UnlinkedIndividual\Http\UnlinkedPage;
 use Fisharebest\Webtrees\Auth;
+use Fisharebest\Webtrees\Http\RequestHandlers\AddUnlinkedPage;
 use Fisharebest\Webtrees\Http\RequestHandlers\TreePage;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Module\AbstractModule;
@@ -31,7 +29,6 @@ use Fisharebest\Webtrees\Module\ModuleBlockInterface;
 use Fisharebest\Webtrees\Module\ModuleBlockTrait;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
-use Fisharebest\Webtrees\Registry;
 use Fisharebest\Webtrees\Tree;
 use Illuminate\Support\Str;
 
@@ -43,28 +40,12 @@ class UnlinkedIndividualModule extends AbstractModule implements ModuleCustomInt
     public const CUSTOM_GITHUB_USER = 'hartenthaler';
     public const GITHUB_REPO        = self::CUSTOM_GITHUB_USER . '/' . self::CUSTOM_MODULE;
     public const CUSTOM_WEBSITE     = 'https://github.com/' . self::GITHUB_REPO . '/';
-    public const CUSTOM_VERSION     = '2.2.6.0';
+    public const CUSTOM_VERSION     = '2.2.6.1';
     public const CUSTOM_LAST        = 'https://github.com/' . self::CUSTOM_GITHUB_USER . '/' .
                                       self::CUSTOM_MODULE . '/raw/main/latest-version.txt';
 
     use ModuleCustomTrait;
     use ModuleBlockTrait;
-
-    /**
-     * Bootstrap.  This function is called on *enabled* modules.
-     * It is a good place to register routes and views.
-     *
-     * @return void
-     */
-    public function boot(): void
-    {
-        $router_container = Registry::container()->get(RouterContainer::class);
-        assert($router_container instanceof RouterContainer);
-        $router = $router_container->getMap();
-
-        $router->get(UnlinkedPage::class, '/tree/{tree}/unlinked-individual');
-        $router->post(UnlinkedAction::class, '/tree/{tree}/unlinked-individual');
-    }
 
     /**
      * Where does this module store its resources
@@ -186,7 +167,7 @@ class UnlinkedIndividualModule extends AbstractModule implements ModuleCustomInt
             return '';
         }
 
-        $url = route(UnlinkedPage::class, [
+        $url = route(AddUnlinkedPage::class, [
             'tree' => $tree->name(),
             'url'  => route(TreePage::class, ['tree' => $tree->name()]),
         ]);

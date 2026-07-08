@@ -9,7 +9,6 @@ use Composer\Autoload\ClassLoader;
 $loader = new ClassLoader();
 
 $loader->addPsr4('Hartenthaler\\Webtrees\\Module\\UnlinkedIndividual\\', __DIR__);
-$loader->addPsr4('Hartenthaler\\Webtrees\\Module\\UnlinkedIndividual\\Http\\', __DIR__ . '/Http');
 
 $loader->register();
 
