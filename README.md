@@ -79,6 +79,7 @@ The module looks for a `.po` file first and falls back to a compiled `.mo` file.
 Current translation files:
 
 * `de.po`
+* `nl.po`
 * `sv.po`
 
 ## Status
@@ -95,6 +96,10 @@ Original module:
 webtrees 2.2 revival:
 
 * Hermann Hartenthaler
+
+Translations:
+
+* TheDutchJewel - Dutch
 
 ## License
 
