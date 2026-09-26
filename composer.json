@@ -20,5 +20,14 @@
     "psr-4": {
       "Hartenthaler\\Webtrees\\Module\\UnlinkedIndividual\\": "./"
     }
+  },
+  "extra": {
+    "webtrees-custom-module": {
+      "title": "Unlinked Individual",
+      "description": "Adds a home-page block for creating an unlinked individual.",
+      "github-repo": "https://github.com/hartenthaler/hh-unlinked-individual",
+      "tag-prefix": "v",
+      "category": "frontend"
+    }
   }
 }
